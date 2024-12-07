@@ -1,4 +1,5 @@
 .weather {
+    width: 50%;
     place-self: center;
     background: linear-gradient(135deg, #ab52ff, #7dbefe, #fd64c5);
     animation: purpleGradientAnimation 8s ease infinite;
@@ -29,19 +30,21 @@
     align-items: center;
     gap: 8px;
     background-color: #fff;
-    padding: 14px 22px;
+    padding: 14px 38px;
     border-radius: 30px;
+    width: 100%;
 }
 
 .search-bar input {
     border: none;
     outline: none;
     font-size: 18px;
+    width: 100%;
 }
 
 .weather-icon {
-    width: 150px;
-    margin: 20px 0;
+    width: 200px;
+    margin: 10px 0 0 0; 
 }
 
 .temperature {
@@ -68,6 +71,8 @@
     align-items: flex-start;
     gap: 12px;
     font-size: 22px;
+    color: #fff;
+    font-weight: 500;
 }
 
 .weather-data .col span {
@@ -77,5 +82,15 @@
 
 .weather-data .col img {
     width: 26px;
-    margin-top: 8px;
+    margin-top: 6px;
+}
+
+@media (max-width: 769px) {
+    .weather {
+        width: 90%;
+    }
+
+    .search-bar {
+        padding: 14px 28px;
+    }
 }
