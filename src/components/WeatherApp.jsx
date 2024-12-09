@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./WeatherApp.css"
 import search_icon from '../assets/search.png'
 import clear from '../assets/clear.png'
@@ -16,13 +16,17 @@ const WeatherApp = () => {
             const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${import.meta.env.VITE_APP_ID}`
 
             const response = await fetch(url);
-            const data = await response.json;
+            const data = await response.json();
             console.log(data);
 
         } catch (error) {
 
         }
     }
+
+    useEffect(() => {
+        search('');
+    }, [])
 
     return (
         <>
